@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seven_days_covid19_treatment/screen/dang_ky.dart';
+import 'package:seven_days_covid19_treatment/screen/quen_mat_khau.dart';
 
 class dangNhap extends StatefulWidget {
   const dangNhap({Key? key}) : super(key: key);
@@ -200,7 +201,7 @@ class _dangNhapState extends State<dangNhap> {
                           ),
                           onPressed: () {},
                           child: const Text(
-                            'Đăng nhập',
+                            'Đăng Nhập',
                             style: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Colors.white,
@@ -219,7 +220,12 @@ class _dangNhapState extends State<dangNhap> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => QuenMatKhauWidget()));
+                          },
                           child: const Text(
                             'Quên mật khẩu ?',
                             style: TextStyle(

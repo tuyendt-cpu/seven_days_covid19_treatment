@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seven_days_covid19_treatment/screen/dang_nhap.dart';
+import 'package:seven_days_covid19_treatment/screen/verification.dart';
 
 class dangKy extends StatefulWidget {
   const dangKy({Key? key}) : super(key: key);
@@ -331,7 +332,19 @@ class _dangKyState extends State<dangKy> {
                           ),
                           elevation: 3,
                         ),
-                        onPressed: () {},
+                        onPressed: () async {
+                          setState(() => _loadingButton1 = true);
+                          try {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => VerificationWidget(),
+                              ),
+                            );
+                          } finally {
+                            setState(() => _loadingButton1 = false);
+                          }
+                        },
                         child: const Text(
                           'Đăng Ký',
                           style: TextStyle(

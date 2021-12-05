@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness.dart';
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/tham_gia_khao_sat.dart';
 import 'package:seven_days_covid19_treatment/component_widget/banner_quay_vong.dart';
 
 class HomePage extends StatefulWidget {
@@ -114,6 +115,18 @@ class _HomePageState extends State<HomePage> {
                       color: Color(0xFFEEEEEE),
                     ),
                     child: card_nutrient(),
+                  ),
+                ),
+                //Card tham gia khao sat
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEEEEEE),
+                    ),
+                    child: card_tham_gia_khao_sat(),
                   ),
                 ),
               ],
