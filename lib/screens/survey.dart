@@ -87,11 +87,11 @@ class _surveyState extends State<survey> {
               child: Row(
                 children: [
                   Text(
-                    'Nồng độ Oxy',
+                    'Nồng độ Oxy (%)',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       color: Colors.black,
-                      fontSize: 14,
+                      fontSize: 17,
                       fontWeight: FontWeight.normal,
                     ),
                   )
@@ -100,6 +100,33 @@ class _surveyState extends State<survey> {
             ),
 
             //Ô điền nồng độ Oxy
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 0, 50, 0),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(border: OutlineInputBorder()),
+              ),
+            ),
+
+            //Ghi chú
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
+              child: Row(
+                children: [
+                  Text(
+                    'Ghi chú',
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontSize: 17,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  )
+                ],
+              ),
+            ),
+
+            //Ô điền ghi chú
             Padding(
               padding: EdgeInsets.fromLTRB(20, 0, 50, 0),
               child: TextField(
