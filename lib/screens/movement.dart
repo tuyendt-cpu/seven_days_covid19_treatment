@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:seven_days_covid19_treatment/component_widget/movement_description.dart';
+import 'package:seven_days_covid19_treatment/screens/videoplayer.dart';
+import 'package:video_player/video_player.dart';
 
 class CacDongTacWidget extends StatefulWidget {
   const CacDongTacWidget({Key? key}) : super(key: key);
@@ -89,7 +91,14 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
                       ),
                       elevation: 3,
                     ),
-                    onPressed: () async {},
+                    onPressed: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => VideoPlayerScreen(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'Bắt đầu tập luyện',
                       style: TextStyle(

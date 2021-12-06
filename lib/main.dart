@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seven_days_covid19_treatment/screens/home.dart';
 import 'package:seven_days_covid19_treatment/screens/profile.dart';
+import 'package:seven_days_covid19_treatment/screens/videoplayer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const Home(),
     );
   }
@@ -61,5 +63,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-//Test
