@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/screens/movement.dart';
 
 class card_fitness extends StatelessWidget {
   const card_fitness({Key? key}) : super(key: key);
@@ -9,7 +10,10 @@ class card_fitness extends StatelessWidget {
       clipBehavior: Clip.antiAliasWithSaveLayer,
       color: Color(0xFFF5F5F5),
       child: InkWell(
-          onTap: () async {},
+          onTap: () async {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => CacDongTacWidget()));
+          },
           child: Column(
             children: <Widget>[Icon(Icons.fitness_center), Text('Tập thể dục')],
           )),
