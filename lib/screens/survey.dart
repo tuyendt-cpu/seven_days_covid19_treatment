@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:seven_days_covid19_treatment/screens/home.dart';
-import 'package:seven_days_covid19_treatment/screens/login.dart';
 
+// ignore: camel_case_types
 class survey extends StatefulWidget {
   const survey({Key? key}) : super(key: key);
 
@@ -10,7 +9,9 @@ class survey extends StatefulWidget {
   _surveyState createState() => _surveyState();
 }
 
+// ignore: camel_case_types
 class _surveyState extends State<survey> {
+  // ignore: non_constant_identifier_names
   final List<String> trieu_chung = <String>[
     'Ho',
     'Đau Đầu',
@@ -30,8 +31,10 @@ class _surveyState extends State<survey> {
           actions: <Widget>[
             IconButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage()));
                 },
                 icon: const Icon(Icons.close))
           ],
@@ -40,7 +43,7 @@ class _surveyState extends State<survey> {
           children: <Widget>[
             //Bạn có các triệu chứng nào sau đây
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 10, 0, 5),
+              padding: const EdgeInsets.fromLTRB(20, 10, 0, 5),
               child: Row(
                 children: const [
                   Text(
@@ -57,17 +60,17 @@ class _surveyState extends State<survey> {
             ),
 
             buildListTile(context, trieu_chung[0]),
-            Divider(indent: 20, endIndent: 20, thickness: 2),
+            const Divider(indent: 20, endIndent: 20, thickness: 2),
             buildListTile(context, trieu_chung[1]),
-            Divider(indent: 20, endIndent: 20, thickness: 2),
+            const Divider(indent: 20, endIndent: 20, thickness: 2),
             buildListTile(context, trieu_chung[2]),
-            Divider(indent: 20, endIndent: 20, thickness: 2),
+            const Divider(indent: 20, endIndent: 20, thickness: 2),
             buildListTile(context, trieu_chung[3]),
-            Divider(indent: 20, endIndent: 20, thickness: 2),
+            const Divider(indent: 20, endIndent: 20, thickness: 2),
             buildListTile(context, trieu_chung[4]),
 
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 10, 0, 10),
+              padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
               child: Row(
                 children: const [
                   Text(
@@ -84,9 +87,9 @@ class _surveyState extends State<survey> {
             ),
             //Nồng độ Oxy
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
+              padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
               child: Row(
-                children: [
+                children: const [
                   Text(
                     'Nồng độ Oxy (%)',
                     style: TextStyle(
@@ -101,7 +104,7 @@ class _surveyState extends State<survey> {
             ),
 
             //Ô điền nồng độ Oxy
-            Padding(
+            const Padding(
               padding: EdgeInsets.fromLTRB(20, 0, 50, 0),
               child: TextField(
                 keyboardType: TextInputType.number,
@@ -111,9 +114,9 @@ class _surveyState extends State<survey> {
 
             //Ghi chú
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
+              padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
               child: Row(
-                children: [
+                children: const [
                   Text(
                     'Ghi chú',
                     style: TextStyle(
@@ -128,14 +131,14 @@ class _surveyState extends State<survey> {
             ),
 
             //Ô điền ghi chú
-            Padding(
+            const Padding(
               padding: EdgeInsets.fromLTRB(20, 0, 50, 0),
               child: TextField(
                 decoration: InputDecoration(border: OutlineInputBorder()),
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+              padding: const EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -154,8 +157,10 @@ class _surveyState extends State<survey> {
                       elevation: 4,
                     ),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
                     },
                     child: const Text(
                       'Cập nhật',
@@ -177,7 +182,7 @@ class _surveyState extends State<survey> {
   Widget buildListTile(BuildContext context, String title) {
     bool _isClick = _clicked.contains(title);
     return ListTile(
-      contentPadding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+      contentPadding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
       title: Text(title),
       trailing: Icon(
         _isClick ? Icons.check_box : Icons.check_box_outline_blank,

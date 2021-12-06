@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
-import 'package:seven_days_covid19_treatment/screens/home.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
 import 'package:seven_days_covid19_treatment/screens/survey.dart';
 
@@ -36,10 +35,10 @@ class _LoginFunctionState extends State<LoginFunction> {
             ClipPath(
               clipper: MyClipper(),
               child: Container(
-                padding: EdgeInsets.only(left: 40, top: 50, right: 20),
+                padding: const EdgeInsets.only(left: 40, top: 50, right: 20),
                 height: 300,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
@@ -55,7 +54,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    SizedBox(height: 0),
+                    const SizedBox(height: 0),
                     Expanded(
                       child: Stack(
                         //
@@ -66,7 +65,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                             fit: BoxFit.fitWidth,
                             alignment: Alignment.topCenter,
                           ),
-                          Positioned(
+                          const Positioned(
                             top: 10,
                             left: 180,
                             child: Text(
@@ -87,13 +86,13 @@ class _LoginFunctionState extends State<LoginFunction> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 10),
+              padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 10),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       children: [
                         TextSpan(
                           text: "Đăng Nhập",
@@ -168,7 +167,7 @@ class _LoginFunctionState extends State<LoginFunction> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
+              padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -235,7 +234,7 @@ class _LoginFunctionState extends State<LoginFunction> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+              padding: const EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -254,8 +253,10 @@ class _LoginFunctionState extends State<LoginFunction> {
                       elevation: 4,
                     ),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => survey()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const survey()));
                     },
                     child: const Text(
                       'Đăng nhập',
@@ -281,7 +282,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => forgot_password()));
+                              builder: (context) => const forgot_password()));
                     },
                     child: const Text(
                       'Quên mật khẩu ?',
@@ -324,7 +325,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => registration()));
+                              builder: (context) => const registration()));
                     },
                     child: const Text(
                       'Đăng kí ngay',

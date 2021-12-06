@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:seven_days_covid19_treatment/component_widget/movement_description.dart';
 import 'package:seven_days_covid19_treatment/screens/videoplayer.dart';
-import 'package:video_player/video_player.dart';
 
 class CacDongTacWidget extends StatefulWidget {
   const CacDongTacWidget({Key? key}) : super(key: key);
@@ -18,7 +16,7 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tập Thể Dục'),
+        title: const Text('Tập Thể Dục'),
         backgroundColor: Colors.blueAccent,
         actions: <Widget>[
           IconButton(
@@ -36,10 +34,10 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
           children: [
             //Các Động Tác
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 16, 24, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 24, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
-                children: [
+                children: const [
                   Text(
                     'Các Động Tác',
                     style: TextStyle(
@@ -53,7 +51,7 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
               ),
             ),
             //Động tác 1
-            Padding(
+            const Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
               child: mo_ta_dong_tac(
                 title: "Động tác 1: Hít Thở",
@@ -61,19 +59,20 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
               ),
             ),
             //Động tác 2
-            Padding(
+            const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                 child: mo_ta_dong_tac(
                     title: "Động tác 2",
                     subtitle: "Giúp khỏe hơn cho phổi của bạn")),
             //Động tác 3
-            Padding(
+            const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                 child: mo_ta_dong_tac(
                     title: "Động tác 3",
                     subtitle: "Giúp khỏe hơn cho phổi của bạn")),
             //Bắt đầu tập luyện
             Padding(
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.fromLTRB(100, 10, 0, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
@@ -95,7 +94,7 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
                       await Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VideoPlayerScreen(),
+                          builder: (context) => const VideoPlayerScreen(),
                         ),
                       );
                     },

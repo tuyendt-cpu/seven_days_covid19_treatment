@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:seven_days_covid19_treatment/screens/login.dart';
-import 'package:seven_days_covid19_treatment/screens/registration.dart';
-import 'package:seven_days_covid19_treatment/screens/verification.dart';
 import 'package:seven_days_covid19_treatment/screens/verification_for_forgot_password.dart';
 
+// ignore: camel_case_types
 class forgot_password extends StatefulWidget {
   const forgot_password({Key? key}) : super(key: key);
 
@@ -12,6 +10,7 @@ class forgot_password extends StatefulWidget {
   _forgot_passwordState createState() => _forgot_passwordState();
 }
 
+// ignore: camel_case_types
 class _forgot_passwordState extends State<forgot_password> {
   TextEditingController? phoneNumberController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -34,17 +33,17 @@ class _forgot_passwordState extends State<forgot_password> {
             await Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => LoginFunction(),
+                builder: (context) => const LoginFunction(),
               ),
             );
           },
-          child: Icon(
+          child: const Icon(
             Icons.chevron_left_rounded,
             color: Colors.white,
             size: 32,
           ),
         ),
-        title: Text(
+        title: const Text(
           'Xác minh số điện thoại',
           style: TextStyle(
             fontFamily: 'Lexend Deca',
@@ -53,11 +52,12 @@ class _forgot_passwordState extends State<forgot_password> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0,
       ),
       backgroundColor: Colors.white,
+      // ignore: sized_box_for_whitespace
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 1,
@@ -66,34 +66,34 @@ class _forgot_passwordState extends State<forgot_password> {
           children: [
             //Field nhập số điện thoại
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
                 controller: phoneNumberController,
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Số điện thoại của bạn....',
-                  labelStyle: TextStyle(
+                  labelStyle: const TextStyle(
                     fontFamily: 'Lexend Deca',
                     color: Colors.black,
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                   ),
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     fontFamily: 'Lexend Deca',
                     color: Color(0x98FFFFFF),
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.grey,
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.grey,
                       width: 1,
                     ),
@@ -102,7 +102,7 @@ class _forgot_passwordState extends State<forgot_password> {
                   filled: true,
                   fillColor: Colors.white,
                   contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
+                      const EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                 ),
                 style: const TextStyle(
                   fontFamily: 'Lexend Deca',
@@ -114,7 +114,7 @@ class _forgot_passwordState extends State<forgot_password> {
             ),
             //Nút nhận mã OTP
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: TextButton(
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.all(16.0),
@@ -132,7 +132,7 @@ class _forgot_passwordState extends State<forgot_password> {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              VerificationForPassWordWidget()));
+                              const VerificationForPassWordWidget()));
                 },
                 child: const Text(
                   'Nhận mã OTP',

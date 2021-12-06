@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class mo_ta_dong_tac extends StatelessWidget {
   const mo_ta_dong_tac({Key? key, required this.title, required this.subtitle})
       : super(key: key);
@@ -14,7 +15,7 @@ class mo_ta_dong_tac extends StatelessWidget {
       children: [
         //Cây timeline
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -22,7 +23,7 @@ class mo_ta_dong_tac extends StatelessWidget {
               Container(
                 width: 16,
                 height: 16,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFFDBE2E7),
                   shape: BoxShape.circle,
                 ),
@@ -30,7 +31,7 @@ class mo_ta_dong_tac extends StatelessWidget {
               Container(
                 width: 2,
                 height: 60,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFFDBE2E7),
                 ),
               )
@@ -39,7 +40,7 @@ class mo_ta_dong_tac extends StatelessWidget {
         ),
         //Title và subtitle động tác
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
           child: Container(
             width: MediaQuery.of(context).size.width * 0.85,
             decoration: BoxDecoration(
@@ -54,7 +55,7 @@ class mo_ta_dong_tac extends StatelessWidget {
                 //Title động tác
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Lexend Deca',
                     color: Color(0xFF151B1E),
                     fontSize: 16,
@@ -63,7 +64,7 @@ class mo_ta_dong_tac extends StatelessWidget {
                 ),
                 //Subtitle động tác
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class profile extends StatefulWidget {
   const profile({Key? key}) : super(key: key);
 
@@ -7,6 +8,7 @@ class profile extends StatefulWidget {
   _profileState createState() => _profileState();
 }
 
+// ignore: camel_case_types
 class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
