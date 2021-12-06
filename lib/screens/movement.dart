@@ -17,7 +17,7 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Tập Thể Dục'),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blueAccent,
         actions: <Widget>[
           IconButton(
               onPressed: () {
@@ -80,7 +80,7 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
                   TextButton(
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.all(16.0),
-                      backgroundColor: Colors.black,
+                      backgroundColor: Colors.blueAccent,
                       textStyle: const TextStyle(
                         fontFamily: 'Lexend Deca',
                         color: Colors.black,

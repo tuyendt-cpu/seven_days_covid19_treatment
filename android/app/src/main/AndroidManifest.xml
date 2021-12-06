@@ -2,7 +2,7 @@
     package="com.example.login_app">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Covid 19 Treatment"
+        android:label="Covid 19 Care"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

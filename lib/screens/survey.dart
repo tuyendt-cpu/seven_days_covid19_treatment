@@ -23,6 +23,7 @@ class _surveyState extends State<survey> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
           title: const Text(
             'Khảo sát tình trạng hàng ngày',
           ),
