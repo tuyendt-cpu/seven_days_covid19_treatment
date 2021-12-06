@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/component_widget/banner_quay_vong.dart';
 import 'package:seven_days_covid19_treatment/screens/home.dart';
-import 'package:seven_days_covid19_treatment/screens/login.dart';
-import 'package:seven_days_covid19_treatment/screens/registration.dart';
-import 'package:seven_days_covid19_treatment/screens/verification.dart';
-import 'package:seven_days_covid19_treatment/screens/survey.dart';
-import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
+import 'package:seven_days_covid19_treatment/screens/profile.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,13 +11,55 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Covid 19',
-      theme: ThemeData(
-          scaffoldBackgroundColor: Color(0xFFFEFEFE),
-          fontFamily: "Poppins",
-          textTheme: TextTheme(bodyText1: TextStyle(color: Color(0xFF4B4B4B)))),
-      home: LoginFunction(),
+      home: const Home(),
     );
   }
 }
+
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _selectedIndex = 0;
+  static List<Widget> pages = <Widget>[HomePage(), profile()];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Covid 19 Care',
+          style: Theme.of(context).textTheme.headline6,
+        ),
+      ),
+      body: pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme.of(context).textSelectionTheme.cursorColor,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+//Test
