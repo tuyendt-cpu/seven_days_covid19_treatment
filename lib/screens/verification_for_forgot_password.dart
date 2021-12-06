@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
 import 'package:seven_days_covid19_treatment/screens/login.dart';
+import 'package:seven_days_covid19_treatment/screens/new_password.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
 
-class VerificationWidget extends StatefulWidget {
-  const VerificationWidget({Key? key}) : super(key: key);
+class VerificationForPassWordWidget extends StatefulWidget {
+  const VerificationForPassWordWidget({Key? key}) : super(key: key);
 
   @override
-  _VerificationWidgetState createState() => _VerificationWidgetState();
+  _VerificationForPassWordWidgetState createState() =>
+      _VerificationForPassWordWidgetState();
 }
 
-class _VerificationWidgetState extends State<VerificationWidget> {
+class _VerificationForPassWordWidgetState
+    extends State<VerificationForPassWordWidget> {
   TextEditingController? phoneNumberController;
   bool _loadingButton = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -35,7 +38,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
               await Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => registration(),
+                  builder: (context) => forgot_password(),
                 ),
               );
             },
@@ -132,7 +135,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginFunction()));
+                              builder: (context) => new_password()));
                     },
                     child: const Text(
                       'Xác minh',

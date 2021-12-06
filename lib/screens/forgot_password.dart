@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:seven_days_covid19_treatment/screens/login.dart';
+import 'package:seven_days_covid19_treatment/screens/registration.dart';
 import 'package:seven_days_covid19_treatment/screens/verification.dart';
+import 'package:seven_days_covid19_treatment/screens/verification_for_forgot_password.dart';
 
 class forgot_password extends StatefulWidget {
   const forgot_password({Key? key}) : super(key: key);
@@ -26,10 +29,20 @@ class _forgot_passwordState extends State<forgot_password> {
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         automaticallyImplyLeading: false,
-        leading: Icon(
-          Icons.chevron_left_rounded,
-          color: Colors.white,
-          size: 32,
+        leading: InkWell(
+          onTap: () async {
+            await Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LoginFunction(),
+              ),
+            );
+          },
+          child: Icon(
+            Icons.chevron_left_rounded,
+            color: Colors.white,
+            size: 32,
+          ),
         ),
         title: Text(
           'Xác minh số điện thoại',
@@ -118,7 +131,8 @@ class _forgot_passwordState extends State<forgot_password> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => VerificationWidget()));
+                          builder: (context) =>
+                              VerificationForPassWordWidget()));
                 },
                 child: const Text(
                   'Nhận mã OTP',

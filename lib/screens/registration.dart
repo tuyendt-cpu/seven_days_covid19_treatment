@@ -351,7 +351,7 @@ class _registrationState extends State<registration> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => forgot_password(),
+                                builder: (context) => VerificationWidget(),
                               ),
                             );
                           } finally {
