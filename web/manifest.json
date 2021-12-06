@@ -1,6 +1,6 @@
 {
-    "name": "seven_days_covid19_treatment",
-    "short_name": "seven_days_covid19_treatment",
+    "name": "login_app",
+    "short_name": "login_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

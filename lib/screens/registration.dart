@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/screen/dang_nhap.dart';
-import 'package:seven_days_covid19_treatment/screen/verification.dart';
+import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
+import 'package:seven_days_covid19_treatment/screens/login.dart';
+import 'package:seven_days_covid19_treatment/screens/verification.dart';
 
-class dangKy extends StatefulWidget {
-  const dangKy({Key? key}) : super(key: key);
+class registration extends StatefulWidget {
+  const registration({Key? key}) : super(key: key);
 
   @override
-  _dangKyState createState() => _dangKyState();
+  _registrationState createState() => _registrationState();
 }
 
-class _dangKyState extends State<dangKy> {
+class _registrationState extends State<registration> {
   TextEditingController? emailAddressController1;
   TextEditingController? emailAddressController2;
   TextEditingController? passwordController1;
@@ -35,7 +36,7 @@ class _dangKyState extends State<dangKy> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFF4B39EF),
+      backgroundColor: Color(0xFFFEFEFE),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
@@ -50,14 +51,25 @@ class _dangKyState extends State<dangKy> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 30),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(9, 0, 0, 0),
-                        child: const Text(
-                          '7 ngày điều trị F0 - Covid 19',
-                          textAlign: TextAlign.end,
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Đăng Ký",
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFF303030),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -78,11 +90,11 @@ class _dangKyState extends State<dangKy> {
                             labelText: 'Họ và tên',
                             labelStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
-                              color: Color(0xFF95A1AC),
+                              color: Color(0xFF303030),
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
-                            hintText: 'name',
+                            hintText: 'Nhập họ và tên....',
                             hintStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -128,17 +140,18 @@ class _dangKyState extends State<dangKy> {
                     children: [
                       Expanded(
                         child: TextFormField(
+                          keyboardType: TextInputType.number,
                           controller: emailAddressController2,
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: 'Số điện thoại',
                             labelStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
-                              color: Color(0xFF95A1AC),
+                              color: Color(0xFF303030),
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
-                            hintText: 'phone',
+                            hintText: 'Nhập số điện thoại...',
                             hintStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -190,11 +203,11 @@ class _dangKyState extends State<dangKy> {
                             labelText: 'Mật khẩu',
                             labelStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
-                              color: Color(0xFF95A1AC),
+                              color: Color(0xFF303030),
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
-                            hintText: 'Enter your email here...',
+                            hintText: 'Nhập mật khẩu...',
                             hintStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -259,11 +272,11 @@ class _dangKyState extends State<dangKy> {
                             labelText: 'Nhập lại mật khẩu',
                             labelStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
-                              color: Color(0xFF95A1AC),
+                              color: Color(0xFF303030),
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
-                            hintText: 'Enter your email here...',
+                            hintText: 'Nhập lại mật khẩu...',
                             hintStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -318,12 +331,12 @@ class _dangKyState extends State<dangKy> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TextButton(
+                      ElevatedButton(
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.all(16.0),
-                          backgroundColor: Colors.black,
+                          backgroundColor: Colors.blueAccent[400],
                           textStyle: const TextStyle(
                             fontFamily: 'Lexend Deca',
                             color: Colors.black,
@@ -338,7 +351,7 @@ class _dangKyState extends State<dangKy> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => VerificationWidget(),
+                                builder: (context) => forgot_password(),
                               ),
                             );
                           } finally {
@@ -366,10 +379,10 @@ class _dangKyState extends State<dangKy> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Bạn đã có tài khoản chưa?',
+                        'Bạn đã có tài khoản chưa ?',
                         style: TextStyle(
                           fontFamily: 'Lexend Deca',
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
@@ -387,13 +400,13 @@ class _dangKyState extends State<dangKy> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => dangNhap()));
+                                  builder: (context) => LoginFunction()));
                         },
                         child: const Text(
                           'Đăng Nhập',
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
-                            color: Colors.green,
+                            color: Colors.blue,
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:seven_days_covid19_treatment/screen/dang_ky.dart';
+import 'package:seven_days_covid19_treatment/screens/login.dart';
+import 'package:seven_days_covid19_treatment/screens/registration.dart';
 
 class VerificationWidget extends StatefulWidget {
   const VerificationWidget({Key? key}) : super(key: key);
@@ -26,14 +27,14 @@ class _VerificationWidgetState extends State<VerificationWidget> {
         key: scaffoldKey,
         appBar: AppBar(
           titleSpacing: 10,
-          backgroundColor: Color(0xFF4B39EF),
+          backgroundColor: Colors.blueAccent,
           automaticallyImplyLeading: false,
           leading: InkWell(
             onTap: () async {
               await Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => dangKy(),
+                  builder: (context) => registration(),
                 ),
               );
             },
@@ -56,16 +57,9 @@ class _VerificationWidgetState extends State<VerificationWidget> {
           centerTitle: false,
           elevation: 0,
         ),
-        backgroundColor: Color(0xFF4B39EF),
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Container(
-            decoration: BoxDecoration(
-              color: Color(0xFF4B39EF),
-              image: DecorationImage(
-                fit: BoxFit.fitWidth,
-                image: AssetImage('assets/background.jpg'),
-              ),
-            ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -80,7 +74,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                       labelText: 'Nhập mã 6 chữ số ...',
                       labelStyle: TextStyle(
                         fontFamily: 'Lexend Deca',
-                        color: Color(0x98FFFFFF),
+                        color: Colors.black,
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
@@ -93,7 +87,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Color(0x00000000),
+                          color: Colors.grey,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(8),
@@ -106,7 +100,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       filled: true,
-                      fillColor: Color(0xFF3124A1),
+                      fillColor: Colors.white,
                       contentPadding:
                           EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
                     ),
@@ -124,7 +118,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                   child: TextButton(
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.all(16.0),
-                      backgroundColor: Colors.black,
+                      backgroundColor: Colors.blueAccent,
                       textStyle: const TextStyle(
                         fontFamily: 'Lexend Deca',
                         color: Colors.black,
@@ -133,7 +127,12 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                       ),
                       elevation: 3,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginFunction()));
+                    },
                     child: const Text(
                       'Xác minh',
                       style: TextStyle(

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:seven_days_covid19_treatment/screen/homepage.dart';
+import 'package:seven_days_covid19_treatment/screens/home.dart';
+import 'package:seven_days_covid19_treatment/screens/login.dart';
 
-class khao_sat extends StatefulWidget {
-  const khao_sat({Key? key}) : super(key: key);
+class survey extends StatefulWidget {
+  const survey({Key? key}) : super(key: key);
 
   @override
-  _khao_satState createState() => _khao_satState();
+  _surveyState createState() => _surveyState();
 }
 
-class _khao_satState extends State<khao_sat> {
+class _surveyState extends State<survey> {
   final List<String> trieu_chung = <String>[
     'Ho',
     'Đau Đầu',
@@ -36,30 +37,9 @@ class _khao_satState extends State<khao_sat> {
         ),
         body: ListView(
           children: <Widget>[
-            //Tiêu đề: Khảo sát nhé
-            SizedBox(
-              height: 10,
-            ),
-            Center(
-                child: Text(
-              'Hello, Khảo sát hàng ngày nhé!',
-              style: TextStyle(
-                fontFamily: 'Lexend Deca',
-                color: Colors.black,
-                fontSize: 27,
-                fontWeight: FontWeight.bold,
-              ),
-            )),
-            //Bạn chỉ mất 3 phút để chúng tôi theo dõi sức khỏe cho bạn
-            Center(
-              child: Text('Mất 30 giây để hoàn thành!'),
-            ),
-            SizedBox(
-              height: 10,
-            ),
             //Bạn có các triệu chứng nào sau đây
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 0, 0, 10),
+              padding: EdgeInsets.fromLTRB(20, 10, 0, 5),
               child: Row(
                 children: const [
                   Text(
@@ -125,7 +105,43 @@ class _khao_satState extends State<khao_sat> {
               child: TextField(
                 decoration: InputDecoration(border: OutlineInputBorder()),
               ),
-            )
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  //Nút cập nhật
+                  ElevatedButton(
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      backgroundColor: Colors.blueAccent[400],
+                      textStyle: const TextStyle(
+                        fontFamily: 'Lexend Deca',
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      elevation: 4,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    },
+                    child: const Text(
+                      'Cập nhật',
+                      style: TextStyle(
+                        fontFamily: 'Lexend Deca',
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ));
   }
@@ -136,8 +152,8 @@ class _khao_satState extends State<khao_sat> {
       contentPadding: EdgeInsets.fromLTRB(40, 0, 40, 0),
       title: Text(title),
       trailing: Icon(
-        _isClick ? Icons.check_box_outline_blank : Icons.check_box,
-        color: _isClick ? Colors.red : null,
+        _isClick ? Icons.check_box : Icons.check_box_outline_blank,
+        color: _isClick ? Colors.blueAccent : null,
       ),
       onTap: () {
         setState(() {

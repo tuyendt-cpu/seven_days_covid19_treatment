@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/screen/khao_sat.dart';
+import 'package:seven_days_covid19_treatment/screens/survey.dart';
 
 class card_tham_gia_khao_sat extends StatelessWidget {
   const card_tham_gia_khao_sat({Key? key}) : super(key: key);
@@ -12,12 +12,12 @@ class card_tham_gia_khao_sat extends StatelessWidget {
       child: InkWell(
           onTap: () async {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => khao_sat()));
+                context, MaterialPageRoute(builder: (context) => survey()));
           },
           child: Column(
             children: <Widget>[
-              Icon(Icons.dining),
-              Text('Cập nhật tình trạng sức khỏe')
+              Icon(Icons.check_box),
+              Text('Cập nhật \ntình trạng\nsức khỏe')
             ],
           )),
     );
