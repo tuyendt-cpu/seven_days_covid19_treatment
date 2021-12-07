@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/screens/nutrient_card.dart';
 
 // ignore: camel_case_types
 class card_nutrient extends StatelessWidget {
@@ -10,7 +11,14 @@ class card_nutrient extends StatelessWidget {
       clipBehavior: Clip.antiAliasWithSaveLayer,
       color: const Color(0xFFF5F5F5),
       child: InkWell(
-          onTap: () async {},
+          onTap: () async {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyHomePage(
+                          title: 'Thực đơn tham khảo',
+                        )));
+          },
           child: Column(
             children: const <Widget>[Icon(Icons.dining), Text('Dinh Dưỡng')],
           )),
