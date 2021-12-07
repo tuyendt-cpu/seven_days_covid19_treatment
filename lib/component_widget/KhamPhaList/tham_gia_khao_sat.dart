@@ -18,7 +18,7 @@ class card_tham_gia_khao_sat extends StatelessWidget {
           child: Column(
             children: const <Widget>[
               Icon(Icons.check_box),
-              Text('Cập nhật \ntình trạng\nsức khỏe')
+              Text('Cập nhật\ntình trạng\nsức khỏe')
             ],
           )),
     );
