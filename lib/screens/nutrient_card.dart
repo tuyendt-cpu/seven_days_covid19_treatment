@@ -13,7 +13,7 @@ class RecipeApp extends StatelessWidget {
     // 3
     return MaterialApp(
       // 4
-      title: 'Thực đơn tham khảo cho bệnh nhân',
+      title: 'Thực đơn tham khảo',
       // 5
       theme: theme.copyWith(
         colorScheme: theme.colorScheme.copyWith(
@@ -22,7 +22,7 @@ class RecipeApp extends StatelessWidget {
         ),
       ),
       // 6
-      home: const MyHomePage(title: 'Thực đơn tham khảo cho bệnh nhân'),
+      home: const MyHomePage(title: 'Thực đơn tham khảo'),
     );
   }
 }
