@@ -118,11 +118,11 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
                     //Card tập thể dục
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: SizedBox(
                         width: 100,
                         height: 100,
@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     //Card chế độ dinh dưỡng
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: SizedBox(
                         width: 100,
                         height: 100,
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     //Card tham gia khao sat
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: SizedBox(
                         width: 100,
                         height: 100,
