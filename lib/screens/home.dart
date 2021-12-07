@@ -7,6 +7,7 @@ import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_k
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/banner_quay_vong.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seven_days_covid19_treatment/component_widget/web_view.dart';
+import 'package:seven_days_covid19_treatment/screens/login.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -282,6 +283,13 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const LoginFunction()));
+        },
+        child: const Icon(Icons.logout),
       ),
     );
   }
