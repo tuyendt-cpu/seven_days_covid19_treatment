@@ -31,6 +31,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
         title: const Text('Tập luyện theo Video bên dưới'),
       ),
       body: FutureBuilder(

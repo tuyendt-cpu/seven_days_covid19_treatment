@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Welcome to Flutter',
+      title: 'Covid 19 Care',
       home: Scaffold(
         body: LoginFunction(),
       ),

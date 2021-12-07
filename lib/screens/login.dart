@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
+import 'package:seven_days_covid19_treatment/screens/home.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
-import 'package:seven_days_covid19_treatment/screens/survey.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/survey.dart';
 
 // Các ô đăng nhập
 class LoginFunction extends StatefulWidget {
@@ -282,7 +282,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const forgot_password()));
+                              builder: (context) => const HomePage()));
                     },
                     child: const Text(
                       'Quên mật khẩu ?',

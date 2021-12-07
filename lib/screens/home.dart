@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/tham_gia_khao_sat.dart';
-import 'package:seven_days_covid19_treatment/component_widget/banner_quay_vong.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness/card_fitness.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient/card_nutrient.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/tham_gia_khao_sat.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/banner_quay_vong.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatefulWidget {

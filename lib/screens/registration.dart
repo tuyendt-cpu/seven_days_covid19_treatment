@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:seven_days_covid19_treatment/screens/login.dart';
-import 'package:seven_days_covid19_treatment/screens/verification.dart';
 
 // ignore: camel_case_types
 class registration extends StatefulWidget {
@@ -353,8 +352,7 @@ class _registrationState extends State<registration> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    const VerificationWidget(),
+                                builder: (context) => const LoginFunction(),
                               ),
                             );
                           } finally {}
