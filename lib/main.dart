@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/screens/home.dart';
 import 'package:seven_days_covid19_treatment/screens/login.dart';
 
 void main() => runApp(MyApp());
