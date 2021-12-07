@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
+import 'package:seven_days_covid19_treatment/component_widget/alert/register_success.dart';
 import 'package:seven_days_covid19_treatment/screens/login.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 // ignore: camel_case_types
 class registration extends StatefulWidget {
@@ -11,23 +15,44 @@ class registration extends StatefulWidget {
 
 // ignore: camel_case_types
 class _registrationState extends State<registration> {
-  TextEditingController? emailAddressController1;
-  TextEditingController? emailAddressController2;
-  TextEditingController? passwordController1;
+  TextEditingController nameController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   bool passwordVisibility1 = false;
-  TextEditingController? passwordController2;
+  TextEditingController repeatPassController = TextEditingController();
   bool passwordVisibility2 = false;
+  bool isRepeatCorrect = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    emailAddressController1 = TextEditingController();
-    emailAddressController2 = TextEditingController();
-    passwordController1 = TextEditingController();
     passwordVisibility1 = false;
-    passwordController2 = TextEditingController();
     passwordVisibility2 = false;
+  }
+
+  //register
+  postData(String? tel, String? name, String? pass) async {
+    try {
+      var response = await http.post(
+          Uri.parse("https://flutter-team.herokuapp.com/api/auth/register"),
+          body: {"tel": tel, "name": name, "password": pass});
+      // ignore: non_constant_identifier_names
+      var string_json = response.body;
+      var json = jsonDecode(string_json);
+      // ignore: avoid_print
+      print(json);
+      if (json["error"] == true || json["error"] != null) {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const RegisterFailed()));
+      } else {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const RegisterSuccess()));
+      }
+    } catch (e) {
+      // ignore: avoid_print
+      print(e);
+    }
   }
 
   @override
@@ -82,7 +107,7 @@ class _registrationState extends State<registration> {
                     children: [
                       Expanded(
                         child: TextFormField(
-                          controller: emailAddressController1,
+                          controller: nameController,
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: 'Họ và tên',
@@ -140,7 +165,7 @@ class _registrationState extends State<registration> {
                       Expanded(
                         child: TextFormField(
                           keyboardType: TextInputType.number,
-                          controller: emailAddressController2,
+                          controller: phoneController,
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: 'Số điện thoại',
@@ -197,7 +222,7 @@ class _registrationState extends State<registration> {
                     children: [
                       Expanded(
                         child: TextFormField(
-                          controller: passwordController1,
+                          controller: passController,
                           obscureText: !passwordVisibility1,
                           decoration: InputDecoration(
                             labelText: 'Mật khẩu',
@@ -267,7 +292,7 @@ class _registrationState extends State<registration> {
                     children: [
                       Expanded(
                         child: TextFormField(
-                          controller: passwordController2,
+                          controller: repeatPassController,
                           obscureText: !passwordVisibility2,
                           decoration: InputDecoration(
                             labelText: 'Nhập lại mật khẩu',
@@ -285,15 +310,19 @@ class _registrationState extends State<registration> {
                               fontWeight: FontWeight.normal,
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFDBE2E7),
+                              borderSide: BorderSide(
+                                color: isRepeatCorrect
+                                    ? Colors.red
+                                    : const Color(0xFFDBE2E7),
                                 width: 2,
                               ),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFDBE2E7),
+                              borderSide: BorderSide(
+                                color: isRepeatCorrect
+                                    ? Colors.red
+                                    : const Color(0xFFDBE2E7),
                                 width: 2,
                               ),
                               borderRadius: BorderRadius.circular(8),
@@ -348,14 +377,18 @@ class _registrationState extends State<registration> {
                           elevation: 3,
                         ),
                         onPressed: () async {
-                          try {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const LoginFunction(),
-                              ),
+                          if (passController.text !=
+                              repeatPassController.text) {
+                            setState(() {
+                              isRepeatCorrect = true;
+                            });
+                          } else {
+                            postData(
+                              phoneController.text,
+                              nameController.text,
+                              passController.text,
                             );
-                          } finally {}
+                          }
                         },
                         child: const Text(
                           'Đăng Ký',
