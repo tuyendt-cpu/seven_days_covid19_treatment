@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:seven_days_covid19_treatment/api/api_request.dart';
+import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
 import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
 import 'package:seven_days_covid19_treatment/screens/survey.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 // Các ô đăng nhập
 class LoginFunction extends StatefulWidget {
@@ -13,18 +17,37 @@ class LoginFunction extends StatefulWidget {
 }
 
 class _LoginFunctionState extends State<LoginFunction> {
-  TextEditingController? emailAddressController;
-  TextEditingController? passwordController;
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   bool passwordVisibility = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    emailAddressController = TextEditingController();
-    passwordController = TextEditingController();
     passwordVisibility = false;
   }
+
+  //login request
+  postDataLogin(String? tel, String? pass) async {
+    try {
+      var response = await http.post(
+          Uri.parse("https://flutter-team.herokuapp.com/api/auth/login"),
+          body: {"tel": tel, "password": pass});
+
+      var json = jsonDecode(response.body);
+
+      if (json["error"] == true || json["error"] != null) {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const RegisterFailed()));
+      } else {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const survey()));
+      }
+      // ignore: empty_catches
+    } catch (e) {}
+  }
+  //register request
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +142,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                   Expanded(
                     child: TextFormField(
                       keyboardType: TextInputType.number,
-                      controller: emailAddressController,
+                      controller: phoneController,
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: 'Số điện thoại',
@@ -174,7 +197,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                 children: [
                   Expanded(
                     child: TextFormField(
-                      controller: passwordController,
+                      controller: passController,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
                         labelText: 'Mật khẩu',
@@ -253,10 +276,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                       elevation: 4,
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const survey()));
+                      postDataLogin(phoneController.text, passController.text);
                     },
                     child: const Text(
                       'Đăng nhập',
@@ -265,32 +285,6 @@ class _LoginFunctionState extends State<LoginFunction> {
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  //Nút quên mật khẩu
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      textStyle: const TextStyle(
-                        fontFamily: 'Lexend Deca',
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const forgot_password()));
-                    },
-                    child: const Text(
-                      'Quên mật khẩu ?',
-                      style: TextStyle(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF303030),
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
