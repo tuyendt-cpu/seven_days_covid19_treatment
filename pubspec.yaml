@@ -40,7 +40,10 @@ dependencies:
   google_fonts: ^2.1.0
   video_player: ^2.2.7
   webview_flutter: ^2.3.1
+<<<<<<< HEAD
   
+=======
+>>>>>>> 9fb207f5fe50744dc27bc152c65aa25a075d2f47
   
     
 

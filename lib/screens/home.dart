@@ -6,6 +6,7 @@ import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_n
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/tham_gia_khao_sat.dart';
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/banner_quay_vong.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:seven_days_covid19_treatment/component_widget/web_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,14 +21,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     'Covid 19 Care',
-      //     style: TextStyle(
-      //       color: Colors.white,
-      //     ),
-      //   ),
-      // ),
       key: scaffoldKey,
       body: SingleChildScrollView(
         child: SafeArea(
@@ -164,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisSize: MainAxisSize.max,
                   children: const <Widget>[
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 10),
                       child: Text(
                         'Cẩm nang y tế',
                         style: TextStyle(
@@ -175,54 +168,108 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-
-              Container(
-                color: Colors.white,
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      child: SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: Color(0xFFF5F5F5),
-                          child: Text(
-                            'Bài báo 1',
-                            textAlign: TextAlign.center,
+              SizedBox(
+                height: 150.0,
+                child: ListView(
+                  padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Card(
+                      child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WebViewContainer(
+                                      "https://covid19.gov.vn/tich-cuc-dieu-tri-f0-tai-nha-171211203095000452.htm")));
+                        },
+                        child: SizedBox(
+                          width: 150,
+                          child: Column(
+                            children: [
+                              Image.network(
+                                'https://covid19.qltns.mediacdn.vn/354844073405468672/2021/12/3/8cv4-1638489308855-1638499755134-1638499755256961581274.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                              const Text('Tích cực điều trị F0 tại nhà'),
+                            ],
                           ),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      child: SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: Color(0xFFF5F5F5),
-                          child: Text(
-                            'Bài báo 2',
-                            textAlign: TextAlign.center,
+                    Card(
+                      child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WebViewContainer(
+                                      "https://nld.com.vn/suc-khoe/huong-dan-moi-nhat-ve-truong-hop-f0-duoc-dieu-tri-tai-nha-20211202150501748.htm")));
+                        },
+                        child: SizedBox(
+                          width: 150,
+                          child: Column(
+                            children: [
+                              Image.network(
+                                'https://covid19.qltns.mediacdn.vn/zoom/600_315/354844073405468672/2021/12/2/avatar1638443423491-16384434238371341883895-0-0-500-800-crop-16384434354861504987256.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                              const Text(
+                                  'Hướng dẫn mới nhất về trường hợp F0 được điều trị tại nhà '),
+                            ],
                           ),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      child: SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: Color(0xFFF5F5F5),
-                          child: Text(
-                            'Bài báo 3',
-                            textAlign: TextAlign.center,
+                    Card(
+                      child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WebViewContainer(
+                                      "https://hcdc.vn/category/van-de-suc-khoe/covid19/tai-lieu-truyen-thong/huong-dan-goi-cham-soc-suc-khoe-tai-nha-cho-nguoi-f0-phien-ban-16-9d692c99f55ff1da0cce2014e681f21b.html")));
+                        },
+                        child: SizedBox(
+                          width: 150,
+                          height: 100,
+                          child: Column(
+                            children: [
+                              Image.network(
+                                'https://image.thanhnien.vn/300x210/uploaded/hanhnb/2021_09_03/z2732707609704_73c88ed38df3ff6a04fc929b066955fc_lovk.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                              const Text(
+                                  'Gói chăm sóc sức khỏe tại nhà cho người F0'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WebViewContainer(
+                                      "https://nld.com.vn/suc-khoe/y-te-tu-nhan-tham-gia-cham-soc-f0-2021120620274544.htm")));
+                        },
+                        child: SizedBox(
+                          width: 150,
+                          height: 100,
+                          child: Column(
+                            children: [
+                              Image.network(
+                                'https://nld.mediacdn.vn/291774122806476800/2021/12/6/14-hinh-chot-1638792338702513435853.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                              const Text('Y tế tư nhân tham gia chăm sóc F0'),
+                            ],
                           ),
                         ),
                       ),
@@ -234,21 +281,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   selectedItemColor: Theme.of(context).textSelectionTheme.cursorColor,
-      //   currentIndex: _selectedIndex,
-      //   onTap: _onItemTapped,
-      //   items: <BottomNavigationBarItem>[
-      //     const BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     const BottomNavigationBarItem(
-      //       icon: Icon(Icons.person),
-      //       label: 'Profile',
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
