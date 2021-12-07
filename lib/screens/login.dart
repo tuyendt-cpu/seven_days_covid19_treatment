@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:seven_days_covid19_treatment/screens/home.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/survey.dart';
 
@@ -278,12 +277,7 @@ class _LoginFunctionState extends State<LoginFunction> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()));
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Quên mật khẩu ?',
                       style: TextStyle(
@@ -325,7 +319,8 @@ class _LoginFunctionState extends State<LoginFunction> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const registration()));
+                              builder: (BuildContext context) =>
+                                  const registration()));
                     },
                     child: const Text(
                       'Đăng kí ngay',
