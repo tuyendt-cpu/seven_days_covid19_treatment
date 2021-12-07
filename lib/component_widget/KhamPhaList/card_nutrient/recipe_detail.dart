@@ -37,11 +37,13 @@ class _RecipeDetailState extends State<RecipeDetail> {
             const SizedBox(
               height: 4,
             ),
+
             // 6
             Text(
               widget.recipe.label,
               style: const TextStyle(fontSize: 18),
             ),
+
             // 7
             Expanded(
               // 8
@@ -57,6 +59,16 @@ class _RecipeDetailState extends State<RecipeDetail> {
                 },
               ),
             ),
+            const Text(
+              'Bạn muốn bao nhiêu khẩu phần ăn',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text('${_sliderVal * widget.recipe.servings} servings'),
             Slider(
               // 10
               min: 1,
