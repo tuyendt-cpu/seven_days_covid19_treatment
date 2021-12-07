@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/tham_gia_khao_sat.dart';
-import 'package:seven_days_covid19_treatment/component_widget/banner_quay_vong.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness/card_fitness.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient/card_nutrient.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/tham_gia_khao_sat.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/banner_quay_vong.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seven_days_covid19_treatment/component_widget/web_view.dart';
 
@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 150.0,
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => WebViewContainer(
+                                  builder: (context) => const WebViewContainer(
                                       "https://nld.com.vn/suc-khoe/huong-dan-moi-nhat-ve-truong-hop-f0-duoc-dieu-tri-tai-nha-20211202150501748.htm")));
                         },
                         child: SizedBox(

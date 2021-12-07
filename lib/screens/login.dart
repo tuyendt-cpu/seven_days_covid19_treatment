@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:seven_days_covid19_treatment/api/api_request.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/survey.dart';
 import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
-import 'package:seven_days_covid19_treatment/screens/forgot_password.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
-import 'package:seven_days_covid19_treatment/screens/survey.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/api/api_request.dart';
 import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
 import 'package:seven_days_covid19_treatment/component_widget/alert/register_success.dart';
 import 'package:seven_days_covid19_treatment/screens/login.dart';

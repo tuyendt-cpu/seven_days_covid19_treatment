@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/recipe.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/recipe_detail.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient/recipe.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient/recipe_detail.dart';
 
 class RecipeApp extends StatelessWidget {
   const RecipeApp({Key? key}) : super(key: key);
@@ -22,13 +22,14 @@ class RecipeApp extends StatelessWidget {
         ),
       ),
       // 6
-      home: const MyHomePage(title: 'Thực đơn tham khảo'),
+      home: const Thuc_Don(title: 'Thực đơn tham khảo'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+// ignore: camel_case_types
+class Thuc_Don extends StatefulWidget {
+  const Thuc_Don({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -42,10 +43,11 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Thuc_Don> createState() => _Thuc_DonState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+// ignore: camel_case_types
+class _Thuc_DonState extends State<Thuc_Don> {
   @override
   Widget build(BuildContext context) {
     // 1

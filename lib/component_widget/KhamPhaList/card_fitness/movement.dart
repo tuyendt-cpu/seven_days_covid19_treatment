@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/component_widget/movement_description.dart';
-import 'package:seven_days_covid19_treatment/screens/videoplayer.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness/movement_description.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness/videoplayer.dart';
 
 class CacDongTacWidget extends StatefulWidget {
   const CacDongTacWidget({Key? key}) : super(key: key);

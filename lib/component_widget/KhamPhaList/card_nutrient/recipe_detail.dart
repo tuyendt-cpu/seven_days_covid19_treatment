@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/recipe.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_nutrient/recipe.dart';
 
 class RecipeDetail extends StatefulWidget {
   final Recipe recipe;

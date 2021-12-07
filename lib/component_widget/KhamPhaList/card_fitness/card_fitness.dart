@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/screens/movement.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_fitness/movement.dart';
 
 // ignore: camel_case_types
 class card_fitness extends StatelessWidget {

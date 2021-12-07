@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seven_days_covid19_treatment/screens/survey.dart';
+import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/survey.dart';
 
 // ignore: camel_case_types
 class card_tham_gia_khao_sat extends StatelessWidget {
