@@ -8,8 +8,8 @@
 
 ## Giải pháp: 
 - Một phần mềm có thể:  
-+ Giúp cho bệnh nhân theo dõi tại nhà.
-+ Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
+    + Giúp cho bệnh nhân theo dõi tại nhà.
+    + Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
 
 ## App có các tính năng sau:
 1. Đăng nhập bằng số điện thoại
