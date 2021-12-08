@@ -1,8 +1,13 @@
-Tên dự án: App Covid Care
+## Tên dự án: App Covid Care
 
-Thực trạng: Dịch bệnh toàn cầu Covid 19 để lại hậu quả rất nghiêm trọng. Mặc dù, chúng ta đã được tiêm vaccine gần hết nhưng ngoài chích vaccine chúng ta còn cần phải tăng sức đề kháng của chính mình bằng các tập thể dục và ăn uống điều độ. Tuy nhiên, nhiều người bệnh vẫn chưa nhận thức được hoặc nhận thức được nhưng không biết cách nào để thực hiện.
+## Thực trạng:
++ Tình trạng dịch bệnh diễn ra phức tạp.
++ Số lượng bệnh nhân quá đông.
++ Tình trạng quá tải của các bệnh viện. 
 
-Giải pháp: Nhóm chúng tôi hiểu được thực trạng trên và muốn tạo ra một phần mềm có thể hướng dẫn sơ bộ về cách tập thể dục và ăn uống cho người bệnh, với mong muốn giúp cho người bệnh có thể nhanh chóng phục hồi sức khỏe.
+## Giải pháp: Một phần mềm có thể:  
++ Giúp cho bệnh nhân theo dõi tại nhà.
++ Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
 
 App có các tính năng sau:
 1. Đăng nhập bằng số điện thoại
