@@ -1,4 +1,4 @@
-## Tên dự án: App Covid Care
+## Tên dự án: App Covid Care 
 
 ## Thực trạng:
 + Tình trạng dịch bệnh diễn ra phức tạp.
@@ -51,6 +51,6 @@
 
 ![image](https://user-images.githubusercontent.com/84313564/145135330-03300471-583f-4598-83fe-c8a85cabb714.png)
 
-Đây là dự án được hoàn thành trong 2 ngày rưỡi trong sự kiện DevFest 2021.
+- Đây là dự án được hoàn thành trong 2 ngày rưỡi trong sự kiện DevFest 2021.
 DevFest2021 thực sự là một sân chơi rất bổ ích, nhóm chúng tôi đã học hỏi lẫn nhau được rất nhiều và cùng nhau hoàn thành app này.
 Xin chân thành cảm ơn ban tổ chức DevFest <3
