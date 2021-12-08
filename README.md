@@ -8,7 +8,9 @@ App có các tính năng sau:
 1. Đăng nhập bằng số điện thoại
 2. Hướng dẫn người bệnh tập các bài tập thở (tăng cường sức khỏe của phổi)
 3. Cập nhật tình trạng bệnh nhân hàng ngày để từ đó đưa ra giải pháp điều trị (đang phát triển)
-4. Tính năng đọc báo online sử dụng webview_flutter
+4. Gợi ý cho người bệnh một số thực đơn ăn uống, tăng sức đề kháng cho cơ thể.
+5. Tính năng đọc báo online sử dụng webview_flutter
+
 
 Đưới đây là giao diện chính của app
 1. Màn hình đăng nhập
