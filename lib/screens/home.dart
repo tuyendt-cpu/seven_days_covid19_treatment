@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Covid19 Care'), actions: <Widget>[
+      appBar: AppBar(title: const Text('Covid19 Care'), actions: <Widget>[
         IconButton(
           icon: const Icon(Icons.logout),
           onPressed: () {
