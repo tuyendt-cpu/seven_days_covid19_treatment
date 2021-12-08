@@ -4,7 +4,6 @@
 + Tình trạng dịch bệnh diễn ra phức tạp.
 + Số lượng bệnh nhân quá đông.
 + Tình trạng quá tải của các bệnh viện.
-+ Lượng vắc-xin không có đủ. 
 + Nhiều người chưa biết cách ăn uống luyện tập đúng cách
 
 ## Giải pháp: 
