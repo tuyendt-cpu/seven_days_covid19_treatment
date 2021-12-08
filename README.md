@@ -1,15 +1,17 @@
 ## Tên dự án: App Covid Care 
 
 ## Thực trạng:
-+ Tình trạng dịch bệnh diễn ra phức tạp.
-+ Số lượng bệnh nhân quá đông.
-+ Tình trạng quá tải của các bệnh viện.
-+ Nhiều người chưa biết cách ăn uống luyện tập đúng cách
+    + Tình trạng dịch bệnh diễn ra phức tạp.
+    + Số lượng bệnh nhân quá đông.
+    + Tình trạng quá tải của các bệnh viện.
+    + Nhiều người chưa biết cách ăn uống luyện tập đúng cách
++ Tuy nhiên nhiều người chưa nhận thức được điều đó hoặc chưa biết cách thực hiện sao cho đúng cách.
 
 ## Giải pháp: 
-- Một phần mềm có thể:  
+- Chúng tôi hiểu thực trạng đó và đã làm ra một phần mềm có thể:  
     + Giúp cho bệnh nhân theo dõi tại nhà.
     + Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
+    + Giúp bệnh nhân có các cách ăn uống nghỉ ngơi hợp lí.
 
 ## App có các tính năng sau:
 1. Đăng nhập bằng số điện thoại.
