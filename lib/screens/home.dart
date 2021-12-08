@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   String? displayName = "";
 
   @override
+  // ignore: must_call_super
   void initState() {
     getData();
   }

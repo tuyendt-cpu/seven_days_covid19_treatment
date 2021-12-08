@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
-import 'package:seven_days_covid19_treatment/component_widget/navigationbar.dart';
 import 'package:seven_days_covid19_treatment/screens/home.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -177,8 +176,10 @@ class _surveyState extends State<survey> {
                       elevation: 4,
                     ),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const Nav()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
                     },
                     child: const Text(
                       'Cập nhật',

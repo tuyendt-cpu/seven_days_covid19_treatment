@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
       title: 'Covid 19 Care',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Covid 19 Care'),
+          backgroundColor: Colors.blueAccent,
+          title: const Text('Covid 19 Care'),
           actions: <Widget>[
             IconButton(
               icon: const Icon(Icons.logout),
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: LoginFunction(),
+        body: const LoginFunction(),
       ),
     );
   }

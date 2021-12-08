@@ -36,6 +36,7 @@ class _LoginFunctionState extends State<LoginFunction> {
           body: {"tel": tel, "password": pass});
 
       var json = jsonDecode(response.body);
+      // ignore: avoid_print
       print(json['error']);
       if (json["error"] == true || json["error"] != null) {
         Navigator.push(context,
