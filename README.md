@@ -1,10 +1,10 @@
 Tên dự án: App Covid Care
 
+Thực trạng: Dịch bệnh toàn cầu Covid 19 để lại hậu quả rất nghiêm trọng. Mặc dù, chúng ta đã được tiêm vaccine gần hết nhưng ngoài chích vaccine chúng ta còn cần phải tăng sức đề kháng của chính mình bằng các tập thể dục và ăn uống điều độ. Tuy nhiên, nhiều người bệnh vẫn chưa nhận thức được hoặc nhận thức được nhưng không biết cách nào để thực hiện.
 
+Giải pháp: Nhóm chúng tôi hiểu được thực trạng trên và muốn tạo ra một phần mềm có thể hướng dẫn sơ bộ về cách tập thể dục và ăn uống cho người bệnh, với mong muốn giúp cho người bệnh có thể nhanh chóng phục hồi sức khỏe.
 
-
-
-App có các tính nắng sau
+App có các tính năng sau:
 1. Đăng nhập bằng số điện thoại
 2. Hướng dẫn người bệnh tập các bài tập thở (tăng cường sức khỏe của phổi)
 3. Cập nhật tình trạng bệnh nhân hàng ngày để từ đó đưa ra giải pháp điều trị (đang phát triển)
@@ -43,3 +43,7 @@ App có các tính nắng sau
 11. Màn hình cập nhật sức khỏe
 
 ![image](https://user-images.githubusercontent.com/84313564/145135330-03300471-583f-4598-83fe-c8a85cabb714.png)
+
+Đây là dự án được hoàn thành trong 2 ngày rưỡi trong sự kiện DevFest 2021.
+DevFest2021 thực sự là một sân chơi rất bổ ích, nhóm chúng tôi đã học hỏi lẫn nhau được rất nhiều và cùng nhau hoàn thành app này.
+Xin chân thành cảm ơn ban tổ chức DevFest <3
