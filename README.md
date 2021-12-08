@@ -9,7 +9,7 @@
 + Giúp cho bệnh nhân theo dõi tại nhà.
 + Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
 
-App có các tính năng sau:
+## App có các tính năng sau:
 1. Đăng nhập bằng số điện thoại
 2. Hướng dẫn người bệnh tập các bài tập thở (tăng cường sức khỏe của phổi)
 3. Cập nhật tình trạng bệnh nhân hàng ngày để từ đó đưa ra giải pháp điều trị (đang phát triển)
@@ -17,7 +17,7 @@ App có các tính năng sau:
 5. Tính năng đọc báo online sử dụng webview_flutter
 
 
-Đưới đây là giao diện chính của app
+## Dưới đây là giao diện chính của app
 1. Màn hình đăng nhập
 
 ![image](https://user-images.githubusercontent.com/84313564/145134722-e3ebde8d-447a-4a2e-9a1d-4aa9d4ed948e.png)
