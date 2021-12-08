@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/screens/login.dart';
 
 class RegisterSuccess extends StatelessWidget {
   const RegisterSuccess({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class RegisterSuccess extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const RegisterSuccess()));
+                      builder: (context) => const LoginFunction()));
             },
             child: const Text(
               'OK',

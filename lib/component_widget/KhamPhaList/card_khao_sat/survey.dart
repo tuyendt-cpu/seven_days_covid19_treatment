@@ -31,10 +31,7 @@ class _surveyState extends State<survey> {
           actions: <Widget>[
             IconButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                  Navigator.pop(context);
                 },
                 icon: const Icon(Icons.close))
           ],
@@ -157,10 +154,7 @@ class _surveyState extends State<survey> {
                       elevation: 4,
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()));
+                      Navigator.pop(context);
                     },
                     child: const Text(
                       'Cập nhật',

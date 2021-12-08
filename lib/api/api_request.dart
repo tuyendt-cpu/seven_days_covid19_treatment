@@ -5,7 +5,6 @@ class ApiRequest {
     String url = 'https://flutter-team.herokuapp.com/api/users';
     http.Response response = await http.get(Uri.parse(url));
     String json = response.body;
-    print(json);
     // Thực hiện convert json to object...
   }
 }

@@ -35,11 +35,10 @@ class _registrationState extends State<registration> {
   postData(String? tel, String? name, String? pass) async {
     try {
       var response = await http.post(
-          Uri.parse("https://flutter-team.herokuapp.com/api/auth/register"),
+          Uri.parse("http://lamda.fun/api/auth/register"),
           body: {"tel": tel, "name": name, "password": pass});
       var string_json = response.body;
       var json = jsonDecode(string_json);
-      print(json);
       if (json["error"] == true || json["error"] != null) {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const RegisterFailed()));

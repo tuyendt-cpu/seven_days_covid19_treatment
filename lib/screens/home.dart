@@ -7,16 +7,28 @@ import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_k
 import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/banner_quay_vong.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seven_days_covid19_treatment/component_widget/web_view.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  String? displayName = "";
+  @override
+  void initState() {
+    getData();
+  }
+
+  getData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      displayName = prefs.getString('displayName');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,12 +75,12 @@ class _HomePageState extends State<HomePage> {
                               fit: BoxFit.fitWidth,
                               alignment: Alignment.topCenter,
                             ),
-                            const Positioned(
+                            Positioned(
                               top: 10,
                               left: 180,
                               child: Text(
-                                "Xin chào,\nNguyễn Văn A",
-                                style: TextStyle(
+                                "Xin chào,\n$displayName",
+                                style: const TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white,

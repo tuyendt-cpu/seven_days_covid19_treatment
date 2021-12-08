@@ -4,7 +4,10 @@ import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_k
 import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
+
+import 'home.dart';
 
 // Các ô đăng nhập
 class LoginFunction extends StatefulWidget {
@@ -19,7 +22,7 @@ class _LoginFunctionState extends State<LoginFunction> {
   TextEditingController passController = TextEditingController();
   bool passwordVisibility = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  String username = "";
   @override
   void initState() {
     super.initState();
@@ -30,7 +33,7 @@ class _LoginFunctionState extends State<LoginFunction> {
   postDataLogin(String? tel, String? pass) async {
     try {
       var response = await http.post(
-          Uri.parse("https://flutter-team.herokuapp.com/api/auth/login"),
+          Uri.parse("http://lamda.fun/api/auth/login"),
           body: {"tel": tel, "password": pass});
 
       var json = jsonDecode(response.body);
@@ -39,8 +42,11 @@ class _LoginFunctionState extends State<LoginFunction> {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const RegisterFailed()));
       } else {
+        username = json["user_namedata"]["original"]["user"]["name"].toString();
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        prefs.setString('displayName', username);
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const survey()));
+            context, MaterialPageRoute(builder: (context) => const HomePage()));
       }
       // ignore: empty_catches
     } catch (e) {}
