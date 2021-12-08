@@ -7,10 +7,24 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Covid 19 Care',
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Covid 19 Care'),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginFunction()));
+              },
+            ),
+          ],
+        ),
         body: LoginFunction(),
       ),
     );
