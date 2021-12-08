@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:seven_days_covid19_treatment/component_widget/KhamPhaList/card_khao_sat/survey.dart';
 import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
 import 'package:seven_days_covid19_treatment/screens/registration.dart';
 import 'package:http/http.dart' as http;
@@ -37,14 +36,16 @@ class _LoginFunctionState extends State<LoginFunction> {
           body: {"tel": tel, "password": pass});
 
       var json = jsonDecode(response.body);
-
+      print(json['error']);
       if (json["error"] == true || json["error"] != null) {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const RegisterFailed()));
       } else {
-        username = json["user_namedata"]["original"]["user"]["name"].toString();
+        username = json["data"]["original"]["user"]["name"].toString();
+        var token = json["data"]["original"]["access_token"].toString();
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setString('displayName', username);
+        prefs.setString('token', token);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const HomePage()));
       }

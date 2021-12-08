@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/component_widget/alert/register_failed.dart';
 import 'package:seven_days_covid19_treatment/component_widget/navigationbar.dart';
 import 'package:seven_days_covid19_treatment/screens/home.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 // ignore: camel_case_types
 class survey extends StatefulWidget {
@@ -12,6 +15,25 @@ class survey extends StatefulWidget {
 
 // ignore: camel_case_types
 class _surveyState extends State<survey> {
+  postDataServey(String? tel, String? pass) async {
+    try {
+      var response = await http.post(
+          Uri.parse("http://lamda.fun/api/auth/login"),
+          body: {"tel": tel, "password": pass});
+
+      var json = jsonDecode(response.body);
+
+      if (json["error"] == true || json["error"] != null) {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const RegisterFailed()));
+      } else {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const HomePage()));
+      }
+      // ignore: empty_catches
+    } catch (e) {}
+  }
+
   // ignore: non_constant_identifier_names
   final List<String> trieu_chung = <String>[
     'Ho',

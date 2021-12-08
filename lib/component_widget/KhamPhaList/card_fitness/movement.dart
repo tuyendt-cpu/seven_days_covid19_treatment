@@ -62,13 +62,13 @@ class _CacDongTacWidgetState extends State<CacDongTacWidget> {
             const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                 child: mo_ta_dong_tac(
-                    title: "Động tác 2",
+                    title: "Động tác 2: Hít thở",
                     subtitle: "Giúp khỏe hơn cho phổi của bạn")),
             //Động tác 3
             const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
                 child: mo_ta_dong_tac(
-                    title: "Động tác 3",
+                    title: "Động tác 3: Thở mạnh",
                     subtitle: "Giúp khỏe hơn cho phổi của bạn")),
             //Bắt đầu tập luyện
             Padding(

@@ -18,6 +18,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   String? displayName = "";
+
   @override
   void initState() {
     getData();
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                     top: 50,
                     right: 20,
                   ),
-                  height: 250,
+                  height: 180,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
@@ -76,8 +77,8 @@ class _HomePageState extends State<HomePage> {
                               alignment: Alignment.topCenter,
                             ),
                             Positioned(
-                              top: 10,
-                              left: 180,
+                              top: 30,
+                              left: 160,
                               child: Text(
                                 "Xin chào,\n$displayName",
                                 style: const TextStyle(
@@ -294,13 +295,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const LoginFunction()));
-        },
-        child: const Icon(Icons.logout),
       ),
     );
   }
