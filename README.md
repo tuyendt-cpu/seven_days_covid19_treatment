@@ -1,23 +1,21 @@
-Tên dự án: App Covid Care
+### Tên dự án: App Covid Care
+## Đặt vấn đề 
++ Tình trạng dịch bệnh diễn ra phức tạp.
++ Số lượng bệnh nhân quá đông.
++ Tình trạng quá tải của các bệnh viện.
+
+## Giải pháp
++ Giúp cho bệnh nhân theo dõi tại nhà.
++ Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
+
+## Ý tưởng
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-App có các tính nắng sau
+## App có các tính nắng sau:
 1. Đăng nhập bằng số điện thoại
 2. Hướng dẫn người bệnh tập các bài tập thở (tăng cường sức khỏe của phổi)
 3. Cập nhật tình trạng bệnh nhân hàng ngày để từ đó đưa ra giải pháp điều trị (đang phát triển)
