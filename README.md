@@ -3,9 +3,11 @@
 ## Thực trạng:
 + Tình trạng dịch bệnh diễn ra phức tạp.
 + Số lượng bệnh nhân quá đông.
-+ Tình trạng quá tải của các bệnh viện. 
++ Tình trạng quá tải của các bệnh viện.
++ Lượng vắc-xin không có đủ. 
 
-## Giải pháp: Một phần mềm có thể:  
+## Giải pháp: 
+- Một phần mềm có thể:  
 + Giúp cho bệnh nhân theo dõi tại nhà.
 + Bác sĩ cũng có thể nắm bắt tình hình bệnh nhân tránh lây nhiễm chéo.
 
