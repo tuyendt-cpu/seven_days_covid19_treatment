@@ -57,4 +57,5 @@
 
 - Đây là dự án được hoàn thành trong 2 ngày rưỡi trong sự kiện DevFest 2021.
 DevFest2021 thực sự là một sân chơi rất bổ ích, nhóm chúng tôi đã học hỏi lẫn nhau được rất nhiều và cùng nhau hoàn thành app này.
--Xin chân thành cảm ơn ban tổ chức DevFest <3 !!!
+
+- Xin chân thành cảm ơn ban tổ chức DevFest <3 !!!
