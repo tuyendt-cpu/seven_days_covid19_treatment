@@ -9,6 +9,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:seven_days_covid19_treatment/component_widget/web_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'login.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
   @override
@@ -35,6 +37,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Covid19 Care'), actions: <Widget>[
+        IconButton(
+          icon: const Icon(Icons.logout),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const LoginFunction()));
+          },
+        ),
+      ]),
       key: scaffoldKey,
       body: SingleChildScrollView(
         child: SafeArea(
