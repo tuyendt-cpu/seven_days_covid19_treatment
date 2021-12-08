@@ -37,6 +37,7 @@ class _registrationState extends State<registration> {
       var response = await http.post(
           Uri.parse("http://lamda.fun/api/auth/register"),
           body: {"tel": tel, "name": name, "password": pass});
+      // ignore: non_constant_identifier_names
       var string_json = response.body;
       var json = jsonDecode(string_json);
       if (json["error"] == true || json["error"] != null) {
@@ -47,6 +48,7 @@ class _registrationState extends State<registration> {
             MaterialPageRoute(builder: (context) => const RegisterSuccess()));
       }
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
@@ -309,7 +311,7 @@ class _registrationState extends State<registration> {
                               borderSide: BorderSide(
                                 color: isRepeatCorrect
                                     ? Colors.red
-                                    : Color(0xFFDBE2E7),
+                                    : const Color(0xFFDBE2E7),
                                 width: 2,
                               ),
                               borderRadius: BorderRadius.circular(8),
@@ -318,7 +320,7 @@ class _registrationState extends State<registration> {
                               borderSide: BorderSide(
                                 color: isRepeatCorrect
                                     ? Colors.red
-                                    : Color(0xFFDBE2E7),
+                                    : const Color(0xFFDBE2E7),
                                 width: 2,
                               ),
                               borderRadius: BorderRadius.circular(8),

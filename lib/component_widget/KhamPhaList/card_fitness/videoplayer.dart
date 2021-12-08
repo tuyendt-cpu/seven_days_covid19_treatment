@@ -32,7 +32,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
-        title: const Text('Tập luyện theo Video bên dưới'),
+        title: const Text('Tập luyện theo video bên dưới'),
       ),
       body: FutureBuilder(
         future: _initializeVideoPlayerFuture,
@@ -47,6 +47,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
               child: CircularProgressIndicator(),
             );
           }
+          // ignore: dead_code
         },
       ),
       floatingActionButton: FloatingActionButton(

@@ -323,7 +323,8 @@ class _LoginFunctionState extends State<LoginFunction> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const registration()));
+                              builder: (BuildContext context) =>
+                                  const registration()));
                     },
                     child: const Text(
                       'Đăng kí ngay',

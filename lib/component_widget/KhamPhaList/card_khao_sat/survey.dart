@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_days_covid19_treatment/component_widget/navigationbar.dart';
 import 'package:seven_days_covid19_treatment/screens/home.dart';
 
 // ignore: camel_case_types
@@ -154,7 +155,8 @@ class _surveyState extends State<survey> {
                       elevation: 4,
                     ),
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const Nav()));
                     },
                     child: const Text(
                       'Cập nhật',

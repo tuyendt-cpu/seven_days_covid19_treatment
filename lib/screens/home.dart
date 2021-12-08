@@ -229,7 +229,8 @@ class _HomePageState extends State<HomePage> {
                                 fit: BoxFit.cover,
                               ),
                               const Text(
-                                  'Hướng dẫn mới nhất về trường hợp F0 được điều trị tại nhà '),
+                                'Hướng dẫn mới nhất về trường hợp F0 được điều trị tại nhà ',
+                              ),
                             ],
                           ),
                         ),
@@ -255,7 +256,8 @@ class _HomePageState extends State<HomePage> {
                                 fit: BoxFit.cover,
                               ),
                               const Text(
-                                  'Gói chăm sóc sức khỏe tại nhà cho người F0'),
+                                'Gói chăm sóc sức khỏe tại nhà cho người F0',
+                              ),
                             ],
                           ),
                         ),
@@ -292,6 +294,13 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const LoginFunction()));
+        },
+        child: const Icon(Icons.logout),
       ),
     );
   }
